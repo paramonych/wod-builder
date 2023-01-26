@@ -1,0 +1,253 @@
+[
+    [
+        {
+            "name": "Activation",
+            "blocks": [
+                {
+                    "rounds": 5,
+                    "movements": [
+                        {
+                            "movement": {
+                                "name": "PVC pass through"
+                            },
+                            "goal": {
+                                "type": "GoalType.Reps",
+                                "value": 12
+                            }
+                        },
+                        {
+                            "movement": {
+                                "name": "Assault bike"
+                            },
+                            "goal": {
+                                "type": "GoalType.Calories",
+                                "value": 9
+                            }
+                        },
+                        {
+                            "movement": {
+                                "name": "Walkouts"
+                            },
+                            "goal": {
+                                "type": "GoalType.Reps",
+                                "value": 6
+                            }
+                        },
+                        {
+                            "movement": {
+                                "name": "Strict Pull-up",
+                            },
+                            "goal": {
+                                "type": "GoalType.Reps",
+                                "value": 3
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Barbell warmup",
+            "blocks": [
+                {
+                    "rounds": 1,
+                    "movements": [
+                        {
+                            "movement": {
+                                "name": "Good morning"
+                            },
+                            "goal": {
+                                "type": "GoalType.Reps",
+                                "value": 5
+                            },
+                            "load": {
+                                "type": "LoadType.Weight",
+                                "value": 20
+                            }
+                        },
+                        {
+                            "movement": {
+                                "name": "Back squat"
+                            },
+                            "goal": {
+                                "type": "GoalType.Reps",
+                                "value": 5
+                            },
+                            "load": {
+                                "type": "LoadType.Weight",
+                                "value": 20
+                            }
+                        },
+                        {
+                            "movement": {
+                                "name": "Elbow rotations",
+                            },
+                            "goal": {
+                                "type": "GoalType.Reps",
+                                "value": 5
+                            },
+                            "load": {
+                                "type": "LoadType.Weight",
+                                "value": 20
+                            }
+                        },
+                        {
+                            "movement": {
+                                "name": "Strict press & reach"
+                            },
+                            "goal": {
+                                "type": "GoalType.Reps",
+                                "value": 5
+                            },
+                            "load": {
+                                "type": "LoadType.Weight",
+                                "value": 20
+                            }
+                        },
+                        {
+                            "movement": {
+                                "name": "Romanian deadlift"
+                            },
+                            "goal": {
+                                "type": "GoalType.Reps",
+                                "value": 5
+                            },
+                            "load": {
+                                "type": "LoadType.Weight",
+                                "value": 20
+                            }
+                        },
+                        {
+                            "movement": {
+                                "name": "Front squats"
+                            },
+                            "goal": {
+                                "type": "GoalType.Reps",
+                                "value": 5
+                            },
+                            "load": {
+                                "type": "LoadType.Weight",
+                                "value": 20
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "HSPU practice",
+            "blocks": [
+                {
+                    "rounds": 5,
+                    "timings": [{
+                        "type": "PhaseType.Total",
+                        "value": "TimeValue.M1HALF"
+                    }],
+                    "movements": [
+                        {
+                            "movement": {
+                                "name": "Strict Deficit Handstand Push-up"
+                            },
+                            "goal": {
+                                "type": "GoalType.MaxReps"
+                            },
+                            "load": {
+                                "type": "LoadType.LengthLow",
+                                "value": -4.5
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Black Rose",
+            "blocks": [
+                {
+                    "rounds": 5,
+                    "timings": [{
+                        "type": "PhaseType.Total",
+                        "value": "TimeValue.M4"
+                    }],
+                    "rest": {
+                        "type": "RestType.ToTimeBase",
+                        "value": "TimeValue.M1"
+                    },
+                    "movements": [
+                        {
+                            "movement": {
+                                "name": "Double Unders"
+                            },
+                            "goal": {
+                                "type": "GoalType.MaxRepsUnbroken",
+                                "value": 50
+                            }
+                        },
+                        {
+                            "movement": {
+                                "name": "Bar muscule-up"
+                            },
+                            "goal": {
+                                "type": "GoalType.Reps",
+                                "value": 7
+                            },
+                            "sets": 2
+                        },
+                        {
+                            "movement": {
+                                "name": "Power Snatch"
+                            },
+                            "goal": {
+                                "type": "GoalType.MaxWeightUnbrokenFixedReps",
+                                "value": 5
+                            },
+                            "load": {
+                                "type": "LoadType.WeightBTH",
+                                "value": 60,
+                                "base": "RMBase.RM1"
+                            }
+                        }
+                    
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Bike & Yoke Conditioning",
+            "blocks": [
+                {
+                    "rounds": 5,
+                    "rest": {
+                        "type": "RestType.Fixed",
+                        "value": "TimeValue.M1"
+                    },
+                    "movements": [
+                        {
+                            "movement": {
+                                "name": "Bike"
+                            },
+                            "goal": {
+                                "type": "GoalType.Time",
+                                "value": "TimeValue.M4"
+                            }
+                        },
+                        {
+                            "movement": {
+                                "name": "Yoke carry",
+                            },
+                            "goal": {
+                                "type": "GoalType.DistanceNormal",
+                                "value": 50
+                            },
+                            "setsUpTo": 2,
+                            "load": {
+                                "type": "LoadType.WeightBTH",
+                                "value": 160
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+]

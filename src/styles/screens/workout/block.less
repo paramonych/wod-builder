@@ -1,0 +1,177 @@
+#screen.workout {
+    .block {
+        margin: @hamburgerPadding;
+        margin-top: @hamburgerPadding/1.2;
+
+        .block-info {
+            background-color: @firmWhite;
+            .flexRowFullwidth();
+            justify-content: space-between;
+            padding-top: @hamburgerPadding/1.5;
+            border-top: 1px solid @firmLightGrey;
+            align-items: flex-end;
+
+            .remove, .info-label {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .remove {
+                margin-left: @hamburgerPadding;
+            }
+       
+            .labutton {
+                margin-left: @hamburgerPadding/3;
+                background-color: @firmLightPink;
+                padding: @hamburgerPadding/16 @hamburgerPadding/4;
+                color: @firmRed;
+                font-size: 0.8rem;
+                border-radius: @hamburgerPadding/2;
+                text-transform: lowercase;
+            }
+
+            &.one {
+                .info-label {
+                    color: @firmDarkerBlue;
+                }
+            }
+            &.two {
+                .info-label {
+                    color: @firmRed;
+                }
+            }
+            &.three {
+                .info-label {
+                    color: @firmDarkGrey;
+                }
+            }
+        }
+
+        .add-element {
+            padding-left: 0;
+        }
+
+        .block-header {
+            margin-bottom: @hamburgerPadding/2;
+            margin-top: @hamburgerPadding*2;
+            padding-bottom: @hamburgerPadding/2;
+            font-size: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: @hamburgerPadding*1.7;
+            border-bottom: 1px solid @firmLighterGrey;
+    
+            .type, .value, .block-index {
+                display: flex;
+                flex-direction: row;    
+                
+                &:not(:last-child) {
+                    margin-right: @hamburgerPadding/4;
+                }
+    
+                .icon {
+                    display: flex;
+                }
+                .value {
+                    margin-left: @hamburgerPadding/4;
+                }
+            }
+    
+            .block-index {
+                border-radius: @normalRadius;
+                align-items: center;
+                padding: 0 @hamburgerPadding/2; 
+            }
+    
+            .one {
+                background-color: @firmLightBlue;
+                color: @firmDarkerBlue;
+            }
+            .two {
+                background-color: @firmLightPink;
+                color: @firmDarkRed;
+            }
+            .three {
+                background-color: @firmLightGrey;
+                color: @firmDarkGrey;
+            }
+    
+            &.three {
+                color: @firmWhite;
+            }
+    
+            .type-config {
+                max-height: @hamburgerPadding*1.7;
+            }
+    
+            .value {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+    }
+
+    
+
+    .block-sliders {
+        display: flow-root;
+        margin-bottom: @hamburgerPadding;
+        min-height: @hamburgerPadding;
+        position: relative;
+
+        .slider {
+            .flexRowFullwidth();
+            justify-content: space-between;
+            margin-bottom: @hamburgerPadding;
+
+            input {
+                width: @sliderWidth;
+            }
+
+            .label {
+                font-size: 1.1rem;
+                position: relative;
+                top: -1px;
+                color: @firmBlack;
+            }
+
+            &.disabled {
+                display: none;
+            }
+        }
+    }
+
+    .config-load, .config {
+        display: flex;
+        flex-direction: row;
+        color: @firmRed;
+        margin-bottom: @hamburgerPadding/4;
+
+        .icon {
+            margin: 0 @hamburgerPadding/4 0 0;
+        }
+
+        .value {
+            line-height: 1.3rem;
+        }
+    }
+
+        
+    .block-details {
+        display: flex!important;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+        line-height: 100%;   
+
+        .type-config.type {
+            margin-right: @hamburgerPadding/2;
+        }
+    }
+}
+
+

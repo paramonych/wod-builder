@@ -1,0 +1,156 @@
+#screen.program {
+    .block {
+        margin-top: @hamburgerPadding/1.2;
+
+        .block-info {
+            background-color: @firmWhite;
+            padding: 0 @hamburgerPadding;
+            .flexRowFullwidth();
+            justify-content: space-between;
+            padding-top: @hamburgerPadding/2;
+            align-items: flex-end;
+
+            .remove, .info-label {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .remove {
+                margin-left: @hamburgerPadding;
+            }
+
+            .info-label {
+                .fullwidth();
+                flex-direction: row;
+                justify-content: flex-start;
+                border: 1px solid @firmLighterGrey; 
+                border-radius: @normalRadius;
+                padding: @hamburgerPadding/2.5 @hamburgerPadding/2;
+            }
+        }
+
+        .e-footer {
+            margin: @hamburgerPadding/1.3 0 0 0;
+            padding: 0 @hamburgerPadding @hamburgerPadding @hamburgerPadding;
+            border-bottom: 1px solid @firmLighterGrey;
+
+            .copy-element .action-label {
+                margin-left: 0.5rem;
+            }
+        }
+
+        .block-header {
+            margin: 0 @hamburgerPadding;
+            margin-bottom: @hamburgerPadding/1.1;
+            font-size: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: @hamburgerPadding*1.7;
+    
+            .block-details {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                height: 100%;
+                line-height: 100%;   
+            }
+    
+            .type, .value, .block-index {
+                display: flex;
+                flex-direction: row;    
+                
+    
+    
+                .icon {
+                    display: flex;
+                }
+                .value {
+                    margin-left: @hamburgerPadding/4;
+                }
+            }
+    
+            .block-index {
+                border-radius: @normalRadius;
+                align-items: center;
+                padding: 0 @hamburgerPadding/2; 
+            }
+    
+            .one {
+                background-color: @firmLightBlue;
+                color: @firmDarkerBlue;
+            }
+            .two {
+                background-color: @firmLightPink;
+                color: @firmDarkRed;
+            }
+            .three {
+                background-color: @firmLightGrey;
+                color: @firmDarkGrey;
+            }
+    
+            &.three {
+                color: @firmWhite;
+            }
+    
+            .type-config {
+                max-height: @hamburgerPadding*1.7;
+            }
+    
+            .value {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-left: @hamburgerPadding/3;
+            }
+        }
+    
+        .block-sliders {
+            display: flow-root;
+            margin-bottom: @hamburgerPadding/2;
+            min-height: @hamburgerPadding;
+            position: relative;
+            padding: 0 @hamburgerPadding;
+    
+            .slider {
+                .flexRowFullwidth();
+                justify-content: space-between;
+                margin-bottom: @hamburgerPadding;
+    
+                input {
+                    width: @sliderWidth;
+                }
+    
+                .label {
+                    font-size: 1.1rem;
+                    position: relative;
+                    top: -1px;
+                    color: @firmBlack;
+                }
+    
+                &.disabled {
+                    display: none;
+                }
+            }
+        }
+    
+        .config-load, .config {
+            display: flex;
+            flex-direction: row;
+            color: @firmRed;
+            margin-bottom: @hamburgerPadding/4;
+    
+            .icon {
+                margin: 0 @hamburgerPadding/4 0 0;
+            }
+    
+            .value {
+                line-height: 1.3rem;
+            }
+        }
+    }
+}
+
+

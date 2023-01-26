@@ -1,0 +1,257 @@
+#screen.wodbook {
+    max-width: 100%!important;
+    .fullwidth();
+
+    .body {
+        height: 100%;
+        background-color: @firmWhite;
+    }
+
+    .coming-soon {
+        top: 0;
+    }
+    
+    .athletesList,
+    .workoutsList,
+    .productsList {
+        background-color: @firmWhite;
+        .fullwidth();
+        padding: @hamburgerPadding*1.5 @hamburgerPadding 0 @hamburgerPadding;
+
+        .athleteItem,
+        .workoutItem,
+        .productItem {
+            cursor: pointer;
+            font-size: 1.4rem;
+            .flexRowFullwidth();
+            align-items: flex-start;
+            margin-bottom: @hamburgerPadding;
+
+            .title {
+                color: @firmBlack;
+                margin-right: @hamburgerPadding/2;
+
+                .date {
+                    font-size: 1rem;
+                    color: @firmLightRed;
+                }
+
+                .email {
+                    margin-bottom: @hamburgerPadding/4;
+                }
+
+                .product-title {
+                    font-size: 1rem;
+                    color: @firmBlue;
+                }
+            }
+            
+            .actions {
+                display: flex;
+                flex-direction: column;
+
+                .edit, .delete {
+                display: flex;
+                   // padding: @hamburgerPadding/2 @hamburgerPadding/1.4;
+                   //padding: @hamburgerPadding/2;
+                   //padding-top: @hamburgerPadding/4.5;
+                }
+
+                .delete,.action {
+                    padding: @hamburgerPadding/3 @hamburgerPadding/2;
+                    color: @firmWhite;
+                    text-align: center;
+                    display: inline-block;
+                }
+                
+                .delete.confirmed, .action.up, .action.down {
+                    background-color: @firmLightRed;
+                }
+
+                .delete.cancel, .action.cancel {
+                    background-color: @firmDarkBlue;
+                    margin-top: @hamburgerPadding/2;
+                }
+
+                .action.down {
+                    margin-top: @hamburgerPadding/2;
+                }
+
+                .prompt {
+                    padding: 0;
+                }
+            }
+        }
+
+        .placeholder {
+            text-align: center;
+            font-size: 1.4rem;
+            margin-top: @hamburgerPadding*4;
+        }
+    }
+
+    .workoutsList {
+        padding-top: @hamburgerPadding*2;
+    }
+
+    .button-wrap {
+        width: 100%;
+        padding: @hamburgerPadding @hamburgerPadding @hamburgerPadding*2 @hamburgerPadding;
+        background-color: @firmWhite;
+
+        #saveProduct,
+        #saveLoading {
+            width: 100%;
+            background-color: @firmDarkRed;
+            border: none;
+            border-radius: @buttonRadius;
+            color: @firmWhite;
+            .regular();
+            font-size: 1.4em;
+            text-transform: uppercase;
+        }
+    }
+
+    #saveLoading {
+        text-align: center;
+        background-color: @firmGrey;
+    }
+
+    .newInvite {
+        display: flex;
+        flex-direction: column;
+        .twoSidesPadding();
+        margin-top: @hamburgerPadding;
+
+        .label {
+            margin-bottom: @hamburgerPadding;
+            font-size: 1.2rem;
+        }
+        
+        input {
+            .fullwidth();
+            padding: @hamburgerPadding/2.5 @hamburgerPadding/2;
+            outline: none;
+            resize: none;
+            overflow: auto;
+            font-family: inherit; 
+            font-size: 1.1rem; 
+            border: 1px solid @firmLightGrey; 
+            border-radius: @normalRadius;
+        }
+
+        #sendInvite,
+        #sendLoading {
+            margin-top: @hamburgerPadding*1.5;
+            background-color: @firmDarkRed;
+            border: none;
+            border-radius: @buttonRadius;
+            color: @firmWhite;
+            .regular();
+            font-size: 1.4em;
+            text-transform: uppercase;
+        }
+
+        #sendLoading {
+            text-align: center;
+            background-color: @firmGrey;
+        }
+    }
+
+    .product {
+        padding: @hamburgerPadding;
+        font-size: 1.4rem;
+    }
+
+    .product-title-wrap,
+    .product-workouts-header {
+        .twoSidesMargin();
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: @hamburgerPadding*1.5;
+
+        .product-title {
+            font-size: 1.4rem;
+            .bold();
+            color: @firmBlue;
+        }
+    }
+
+    .product-workouts-header {
+        margin-top: 0;
+        padding-bottom: @hamburgerPadding;
+        border-bottom: 1px solid @firmLightRed;
+
+        .header-label {
+            font-size: 1.4rem;
+            color: @firmBlack;
+        }
+    }
+
+    .separator {
+        margin: @hamburgerPadding*1.5 0;
+        border-bottom: 1px solid @firmLightGrey;
+      
+    }
+
+    .editable {
+        .flexRowFullwidth();
+        .twoSidesPadding();
+        padding-top: @hamburgerPadding;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .icon {
+            display: flex;
+            margin-left: @hamburgerPadding/1.1;
+            margin-bottom: @hamburgerPadding/2.5;
+        }
+
+        textarea {
+            .fullwidth();
+            padding: @hamburgerPadding/2.5 @hamburgerPadding/2;
+            outline: none;
+            resize: none;
+            overflow: auto;
+            font-family: inherit; 
+            font-size: 1.1rem; 
+            border: 1px solid @firmLightGrey; 
+            border-radius: @normalRadius;
+        }
+    }
+
+    .editable.workouts {
+        height: calc(100% - @appPadding*4 -  @hamburgerPadding*2);
+        align-items: flex-end;
+        padding-top: 0;
+
+        .workouts-select {
+            width: 100%;
+            height: 100%;
+            outline: none;
+            resize: none;
+            overflow: auto;
+            font-family: inherit; 
+            font-size: 1.1rem; 
+            border: 1px solid @firmLightGrey; 
+            border-radius: @normalRadius;
+            margin-top: 0;
+            overflow-y: scroll;
+    
+            .workout-option {
+                padding: @hamburgerPadding/2.5 @hamburgerPadding/2;
+                margin: @hamburgerPadding/4 0;
+
+                &.selected {
+                    background-color: @firmBlue;
+                    color: @firmWhite;
+                }
+            }
+        }
+    }
+
+    .coming-soon:not(.no-top) {
+        margin-top: @hamburgerPadding*3;
+    }
+}

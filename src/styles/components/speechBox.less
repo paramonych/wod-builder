@@ -1,0 +1,41 @@
+#speechBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    .fullwidth();
+    display: flex;
+    justify-content: center; 
+}
+#speechBoxText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center;
+    background-color: @firmWhite;
+    padding: @appPadding/6 0;
+    .regularShadow();
+}
+
+#speechBoxText .spacer {
+    display: block;
+    width: calc(100% - @appPadding/2);
+    margin: auto;
+}
+
+#speechBox.one {
+    height: 100%;
+    flex-direction: column;
+    background-color: @firmDarkGreyTransparent;
+}
+.one #speechBoxText {
+    .fullwidth();
+    flex-direction: row;
+    height: @appPadding * 2;
+}
+
+.two #speechBoxText {
+    width: calc(100% - @appPadding);
+    height: @appPadding;
+    border-radius: 0 0 @buttonRadius @buttonRadius;
+}

@@ -1,0 +1,11 @@
+//animation: (name) (duration) (timing-function) (delay) (iteration-count) (direction)
+
+#screen.workout .show-timer {
+    animation: slideInHorizontally 250ms @agressive;
+    animation-fill-mode: forwards;
+}
+
+#screen.workout .hide-timer {
+    animation: slideOutHorizontally 250ms linear;
+    animation-fill-mode: forwards;
+}

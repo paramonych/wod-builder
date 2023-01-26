@@ -1,0 +1,150 @@
+@import "./complex.less";
+@import "./block.less";
+@import "./movement.less";
+@import "./timer.less";
+
+.images {
+    display: flex;
+    .fullwidth();
+    justify-content: center;
+    flex-direction: column;
+    margin-top: @headerHeight;
+}
+
+.workout .body, .coach .body, .wrap {
+    .fullFrame();
+}
+
+.wrap {
+    padding: 0;
+    margin: 0;
+    background-color: @firmWhite;
+}
+.footer {
+    text-align: center;
+    margin-bottom: @appPadding*1.5;
+}
+
+.buttons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    .fullwidth();
+    height: @headerHeight;
+}
+
+.left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+button {
+    padding: 7px 12px;
+    font-size: 14px;
+}
+
+.power-by {
+    position: relative;
+    top: @headerHeight;
+}
+
+#screen.workout, #screen.coach { 
+    #header {
+        background-color: @firmRed;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: @appPadding;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .content {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: calc(100% - @hamburgerPadding*2);
+            align-items: center;
+    
+            #midlogo {
+                top: calc(@hamburgerPadding / 8);
+            }
+        }
+    }
+
+    .coming-soon {
+        justify-content: flex-start!important;
+    
+        &:not(.no-top) {
+            margin-top: @appPadding/4;
+            div {
+                top: calc(15vh);
+            }    
+        }
+
+        &.no-top {
+            div {
+                top: calc(25vh);
+            }    
+        }
+        
+        &.qr {
+            display: block!important;
+            margin-top: 0;
+            
+            #qr {
+                max-width: 90%;
+                width: 60%;
+                height: calc(60vw);
+                margin: auto;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            .share-label {
+                text-align: center;
+                margin-top: @hamburgerPadding;
+                text-transform: uppercase;
+                font-size: @hamburgerPadding;
+                max-width: 100%;
+            }
+        }
+
+        #canvas {
+            position: relative;
+            top: calc(@hamburgerPadding - @appPadding); 
+            width: calc(100vw - @hamburgerPadding*2);
+        }
+    }
+
+    
+
+    .program-title {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        .twoSidesPadding();
+        .fullwidth();
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: @hamburgerPadding*2.5;
+        .bold();
+        color: @firmBlue;
+        position: relative;
+        top: @hamburgerPadding*0.75;
+        margin-bottom: @hamburgerPadding*0.25;
+    }
+}

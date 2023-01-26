@@ -1,0 +1,49 @@
+@import './stars.less';
+
+.donate-body {
+    margin: 0 @hamburgerPadding*2;
+    padding-bottom: @hamburgerPadding*3;
+
+    div {
+        text-align: left;
+        top: 0!important;
+    }
+
+    div:last-child {
+        max-width: 100%!important;
+
+        div:not(:first-child), textarea {
+            margin-top: @hamburgerPadding/2;
+        }
+
+        div {
+            text-align: center;
+        }
+        div.rating {
+            margin: 0;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        border: 1px solid @firmLightGrey;
+        color: @firmBlack!important;
+        background: @firmWhite!important;
+        padding: @hamburgerPadding/1.5!important;
+        font-size: @hamburgerPadding/1.2!important;
+        .regular();
+    }
+
+    button {
+        background-color: @firmDarkRed;
+        border: none;
+        padding: @hamburgerPadding/2.5;
+        border-radius: @buttonRadius;
+        color: @firmWhite;
+        .regular();
+        font-size: @hamburgerPadding;
+        text-transform: uppercase;
+        width: 60%;
+        margin-top: @hamburgerPadding;
+    }
+}

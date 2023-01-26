@@ -1,0 +1,107 @@
+#profile {
+    position: fixed;
+    left: @hamburgerPadding;
+    top: @hamburgerPadding*3;
+    .flexRowCentered();
+    justify-content: start;
+
+    #profilePic {
+        .flexColumnCentered();
+
+        #avatar {
+            width: @hamburgerPadding*4.5;
+            height: @hamburgerPadding*4.5;
+
+            -webkit-clip-path: circle(48% at 50% 50%);
+            clip-path: circle(48% at 50% 50%);
+
+            .wrap {
+                width: @hamburgerPadding*4.5;
+                height: @hamburgerPadding*4.5;
+        
+                -webkit-clip-path: polygon(7% 25%, 7% 75%, 50% 100%, 93% 75%, 93% 25%, 50% 0, 7% 25%);
+                clip-path: polygon(7% 25%, 7% 75%, 50% 100%, 93% 75%, 93% 25%, 50% 0, 7% 25%);
+                //clip-path: url(/images/svg/top/ava-sm-mask.svg#clip-path); // not working
+                //clip-path: url(/images/svg/top/ava-mask.svg#svgPath); // not working
+            }
+        }
+
+        .red-label {
+            color: @firmWhite;
+            background-color: @firmRed;
+            border-radius: 0.3rem;
+            width: @hamburgerPadding*2.5;
+            height: @hamburgerPadding*0.9;
+            .flexRowCentered();
+            align-items: center;
+            justify-content: space-evenly;
+            position: relative;
+            top: -@hamburgerPadding/2;
+
+            .crown {
+                background-color: @firmWhite;
+                width: @hamburgerPadding/2;
+                height: @hamburgerPadding/2;
+                position: relative;
+                top: -@hamburgerPadding/8;
+                -webkit-clip-path: polygon(0 50%, 0 100%, 100% 100%, 100% 50%, 75% 75%, 50% 45%, 25% 75%);
+                clip-path: polygon(0 50%, 0 100%, 100% 100%, 100% 50%, 75% 75%, 50% 45%, 25% 75%);
+            }
+
+        }
+    }
+
+    #profileDetails {
+        margin-left: @hamburgerPadding/2;
+        position: relative;
+        top: -@hamburgerPadding/1.7;
+
+        .username {
+            font-size: @hamburgerPadding*1.45;
+        }
+
+        .location {
+            font-size: @hamburgerPadding*0.85;
+            color: @firmGrey;
+        }
+    }
+}
+
+@media screen and (device-aspect-ratio: 40/71) {
+    #avatar {
+        width: @hamburgerPadding*2.5!important;
+        height: @hamburgerPadding*2.5!important;
+
+        .wrap {
+            width: @hamburgerPadding*2.5!important;
+            height: @hamburgerPadding*2.5!important;
+        }
+    }
+
+    #profileDetails {
+        .username {
+            font-size: @hamburgerPadding!important;
+        }
+
+        .location {
+            font-size: @hamburgerPadding*0.65!important;
+        }
+    }
+
+    #profile {
+        .red-label {
+            border-radius: 0.15rem!important;
+            width: @hamburgerPadding*1.7!important;
+            height: @hamburgerPadding*0.6!important;
+            top: -@hamburgerPadding/2!important;
+            font-size: 0.6rem!important;
+
+            .crown {
+                width: @hamburgerPadding/2.3!important;
+                height: @hamburgerPadding/2.3!important;
+                top: -@hamburgerPadding/9;
+            }
+
+        }
+    }
+}

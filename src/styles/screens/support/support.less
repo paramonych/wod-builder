@@ -1,0 +1,48 @@
+.support {
+    .coming-soon div {
+        top: -6.5rem;
+    }
+
+    .memes {
+        padding: 0 @hamburgerPadding*1.5;
+        margin-top: @hamburgerPadding/3;
+        background-color: @firmWhite;
+        position: relative;
+
+        .meme {
+            margin-top: @hamburgerPadding;
+            .flexRowFullwidth();
+            align-items: flex-start;
+            justify-content: flex-start;
+            
+
+            .icon {
+                min-width: 13%;
+                margin-right: @hamburgerPadding*1.2;
+                color: @firmRed;
+                text-transform: uppercase;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    .memes.vocab {
+        margin-top: 0;
+        padding-top: @hamburgerPadding*1.5;
+        margin-bottom: @hamburgerPadding*1.5;
+    }
+
+    .left {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .right {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

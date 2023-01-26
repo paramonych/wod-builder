@@ -1,0 +1,15 @@
+
+//animation: (name) (duration) (timing-function) (delay) (iteration-count) (direction)
+
+// CHECK easing.less AND timings.less 
+
+#speechBox {
+    animation: slideInVertically @mediumAreaIn @incoming, slideOutVertically @mediumAreaOut @standard 1500ms 1;
+    animation-fill-mode: forwards;
+}
+
+#speechBoxText {
+    animation: fadeShadowIn @mediumAreaIn @incoming, fadeShadowOut @mediumAreaOut @standard 1500ms 1;
+    animation-fill-mode: forwards;
+}
+

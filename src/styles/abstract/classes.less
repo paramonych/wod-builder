@@ -1,0 +1,75 @@
+.fullwidth {
+    width: 100%;
+}
+
+.twoSidesPadding() {
+    padding-left: @hamburgerPadding;
+    padding-right: @hamburgerPadding;
+}
+
+.twoSidesMargin() {
+    margin-left: @hamburgerPadding;
+    margin-right: @hamburgerPadding;
+}
+
+.fullFrame {
+    .fullwidth();
+    height: 100%;
+}
+
+.ocsm {
+    font-family: 'OCSM';
+    font-style: normal;
+}
+
+.regular {
+    .ocsm();
+    font-style: normal;
+}
+.medium {
+    .ocsm();
+    font-weight: 500;
+}
+.bold {
+    .ocsm();
+    font-weight: bold;
+}
+
+.flexColumnCentered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flexRowCentered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.flexRowFullwidth {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.timeCube {
+    width: 37px;
+    min-width: 37px;
+    height: 37px;
+    color: @firmWhite;
+    .flexRowCentered();
+    font-size: 1.55rem;
+    background-color: @firmDarkGrey;
+}
+
+.timeCubeInverted {
+    .timeCube();
+    .bold();
+    color: @firmDarkGrey;
+    background-color: @firmWhite;
+}

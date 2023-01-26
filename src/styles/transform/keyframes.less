@@ -1,0 +1,60 @@
+// SEQUENCES OF TRANSFORMATIONS DESCRIBED IN transform.less
+
+@keyframes slideInHorizontally {
+    0%, 65% { .leftShift(); .invisible(); }
+    90% { .visible(); }
+    100% { .noShift(); .visible(); }
+}
+
+@keyframes slideOutHorizontally {
+    0%, 65% { .noShift(); .visible(); }
+    90% { .visible(); }
+    100% { .leftShift(); .invisible(); }
+}
+
+@keyframes fadeIn {
+    0%, 65% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@keyframes slideInVertically {
+    0%, 65% { .verticalShift(); }
+    100% { .noShift(); }
+}
+
+@keyframes slideOutVertically {
+    0%, 65% { .noShift(); }
+    100% { .verticalShift(); }
+}
+
+@keyframes fadeShadowOut {
+    0%, 65% { .materialShadow(); }
+    100% { .noShadow(); }
+}
+
+@keyframes fadeShadowIn {
+    0%, 65% { .noShadow(); }
+    100% { .materialShadow(); }
+}
+
+@keyframes menuExposeSequence {
+    0% { .fullScreen(); .noShadow(); }
+    100% { .screenShifted(); .materialShadow(); }
+}
+
+@keyframes menuHideSequence {
+    0% { .screenShifted(); .materialShadow(); .invisible(); }
+    100% { .fullScreen(); .noShadow(); .visible(); }
+}
+
+@keyframes pulse {
+    0% {.visible();}
+    50% {.invisible();}
+    100% {.visible();}
+}
+
+@keyframes borderPulse {
+    0% {border-color:@firmLightGrey;}
+    50% {border-color:@firmRed;}
+    100% {border-color:@firmLightGrey;}
+}

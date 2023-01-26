@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="stylesheets/bootstraps.css">
+        <link rel="stylesheet" href="stylesheets/calendar.css">
+        <link rel="stylesheet" href="stylesheets/calendar-style.css">
+
+        <script src="javascripts/vendors/bootstrap.js"></script>
+        <script src="javascripts/vendors/moment.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="javascripts/init.js"></script>
+    </head>
+
+    <body>
+            <div id="calendarContainer">
+                <div class="calendar small">
+                  <div class="year">
+                    <div id="calendarContainer-year-back">
+                      <svg style="width: 42px; height: 42px" viewBox="0 0 24 24">
+                        <path fill="#fff" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                      </svg>
+                    </div><span id="calendarContainer-year">2017</span>
+                    <div id="calendarContainer-year-next">
+                      <svg style="width: 42px; height: 42px" viewBox="0 0 24 24">
+                        <path fill="#fff" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="month" style="background-color: rgb(99, 199, 255);color: rgb(255, 255, 255)">
+                    <div id="calendarContainer-month-back">
+                      <svg style="width: 42px; height: 42px" viewBox="0 0 24 24">
+                        <path fill="#fff" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                      </svg>
+                    </div><span id="calendarContainer-month">August</span>
+                    <div id="calendarContainer-month-next">
+                      <svg style="width: 42px; height: 42px" viewBox="0 0 24 24">
+                        <path fill="#fff" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="labels"><span id="label-1">Sun</span><span id="label-2">Mon</span><span id="label-3">Tue</span><span id="label-4">Wed</span><span id="label-5">Thu</span><span id="label-6">Fri</span><span id="label-7">Sat</span></div>
+                  <div class="date" style="display:none">
+                    <div id="organizerContainer-day-back">
+                      <svg style="width: 42px; height: 42px" viewBox="0 0 24 24">
+                        <path fill="#fff" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                      </svg>
+                    </div><span id="organizerContainer-date">August 19, 2017</span>
+                    <div id="organizerContainer-day-next">
+                      <svg style="width: 42px; height: 42px" viewBox="0 0 24 24">
+                        <path fill="#fff" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="days">
+                    <div class="row row-1">
+                      <label class="calendarContainer day diluted"><span class="day-1">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-2">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-3">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-4">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-5">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-6">26</span></label>
+                      <label class="calendarContainer day"><span class="day-7">26</span></label>
+                    </div>
+                    <div class="row row-2">
+                      <label class="calendarContainer day diluted"><span class="day-1">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-2">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-3">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-4">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-5">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-6">26</span></label>
+                      <label class="calendarContainer day"><span class="day-7">26</span></label>
+                    </div>
+                    <div class="row row-3">
+                      <label class="calendarContainer day diluted"><span class="day-1">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-2">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-3">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-4">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-5">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-6">26</span></label>
+                      <label class="calendarContainer day"><span class="day-7">26</span></label>
+                    </div>
+                    <div class="row row-4">
+                      <label class="calendarContainer day diluted"><span class="day-1">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-2">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-3">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-4">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-5">26</span></label>
+                      <label class="calendarContainer day diluted"><span class="day-6">26</span></label>
+                      <label class="calendarContainer day"><span class="day-7">26</span></label>
+                    </div>                
+                  </div>
+                  <div class="hours" style="display:none">
+                    <ol class="list" id="organizerContainer-list">
+                      <li>
+                        <div class="hour"><span class="organizerContainer time">6:00</span>
+                          <div class="avatar"><img src="images/avatar.png" width="40px" height="40px"/></div>
+                          <p>Somebody's name</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="hour"><span class="organizerContainer time">7:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="hour"><span class="organizerContainer time">8:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="hour"><span class="organizerContainer time">9:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="hour"><span class="organizerContainer time">10:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="hour"><span class="organizerContainer time">11:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="hour"><span class="organizerContainer time">12:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="hour"><span class="organizerContainer time">13:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="hour"><span class="organizerContainer time">14:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="hour"><span class="organizerContainer time">15:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="hour"><span class="organizerContainer time">16:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="hour"><span class="organizerContainer time">17:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="hour"><span class="organizerContainer time">18:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="hour"><span class="organizerContainer time">19:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="hour"><span class="organizerContainer time">20:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="hour"><span class="organizerContainer time">21:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li class="diluted">
+                        <div class="hour"><span class="organizerContainer time">22:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li class="diluted">
+                        <div class="hour"><span class="organizerContainer time">23:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li class="diluted">
+                        <div class="hour"><span class="organizerContainer time">0:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li class="diluted">
+                        <div class="hour"><span class="organizerContainer time">1:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li class="diluted">
+                        <div class="hour"><span class="organizerContainer time">2:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li class="diluted">
+                        <div class="hour"><span class="organizerContainer time">3:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li class="diluted">
+                        <div class="hour"><span class="organizerContainer time">4:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                      <li class="diluted">
+                        <div class="hour"><span class="organizerContainer time">5:00</span>
+                          <p>-</p>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+        
+    </body>
+</html>

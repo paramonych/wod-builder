@@ -1,0 +1,49 @@
+.screen-nav, .recog-fb {
+    .fullwidth();
+    position: relative;
+    top: @appPadding;
+    .flexColumnCentered();
+    border-bottom: 1px solid @firmLightGrey;
+
+    .content {
+        .flexRowFullwidth();
+        margin-bottom: 20px;
+        top: @appPadding;
+        width: calc(100% - @hamburgerPadding*2);
+        margin: @hamburgerPadding/2 0;
+        font-size: 1.2rem;
+
+        .svg-wrap {
+            width: 25px;
+            height: 25px;
+        }
+
+        .label-wrap {
+            .flexColumnCentered();
+            margin: 0 @hamburgerPadding*2;
+        }
+
+        .label {
+            text-transform: uppercase;
+            font-family: 'OCSMM';
+        }
+
+        .label-sub {
+            background-color: @firmLightPink;
+            padding: @hamburgerPadding/20 @hamburgerPadding/4;
+            margin-bottom: @hamburgerPadding/16;
+            color: @firmRed;
+            font-size: 0.8rem;
+            border-radius: @hamburgerPadding/2;
+            text-transform: lowercase;
+        }
+    }
+
+    .red {
+        color: @firmRed;
+    }
+
+    .blue {
+        color: @firmBlue;
+    }
+}

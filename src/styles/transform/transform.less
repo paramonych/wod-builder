@@ -1,0 +1,37 @@
+.screenShifted {
+    transform: translate3d(35%, 10%, 0) scale3d(0.7, 0.7, 1);
+    overflow: hidden;
+}
+
+.fullScreen {
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    overflow: visible;
+}
+
+.verticalShift {
+    -webkit-transform: translate3d(0, -100%, 0);
+    -moz-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+}
+.leftShift {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+.noShift {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.invisible() {
+    opacity: 0;
+}
+
+.visible() {
+    opacity: 1;
+}

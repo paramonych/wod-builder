@@ -1,0 +1,201 @@
+
+.logo {
+    width: @headerHeight*1.3;
+    min-width: @headerHeight*1.3;
+    height: @headerHeight;
+    position: relative;
+    top: 0.02em;
+    left: -@appPadding/2.6;
+    background-image: @logoLinePath;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90%;
+}
+
+.layer {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.welcome-layer {
+    background-image: @welcomeBack;
+    z-index: 2;
+}
+.login-layer {
+    opacity: 0;
+    background-color: @firmRed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    .navback {
+        margin: @hamburgerPadding*0.8 0 0 @hamburgerPadding;
+    }
+}
+
+form {
+    height: 55%;
+    min-height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 16% 12% 16%;
+}
+
+.welcome-logo {
+    margin: auto;
+    background-image: @smallLogoPath;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.welcome-layer .welcome-logo {
+    width: 65%;
+    height: 40%;
+    min-height: 40%;
+}
+.login-layer .welcome-logo {
+    width: 45%;
+    height: 40%;
+}
+
+// LOGIN/SIGNUP 
+
+.labels {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    color: @firmWhite;
+    .bold();
+}
+
+.labels .login,
+.labels .signup,
+.labels .restore {
+    font-size: 1.6rem;
+    color: @firmDarkThinRed;
+    //width: calc(50% - 1px);
+    text-align: center;
+    .regular();
+}
+
+.labels .login.active,
+.labels .signup.active,
+.labels .restore.active {
+    color: @firmWhite;
+}
+
+@labelsHeight: 20px;
+
+.labels .separator,
+.labels p {
+    height: 1.6rem;
+    margin: 0;
+}
+
+.labels .login p {
+    position: relative;
+    left: -4%;
+}
+
+.labels .separator {
+    width: 1px;
+    background-color: @firmDarkThinRed;
+}
+
+.inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -@hamburgerPadding/3;
+}
+
+.inputs input {
+    color: @firmWhite!important;
+    background: @firmRed!important;
+    border: none!important;
+    border-bottom: 1px solid @firmDarkThinRed!important;
+    padding: 1.7rem 0 0.4rem 0!important;
+    font-size: 1.4rem!important;
+    .regular();
+}
+
+@-webkit-keyframes autofill {
+    to {
+        color: #fff!important;
+        background: transparent;
+    }
+}
+
+.inputs input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+#email {
+    padding: 0 0 0.4rem 0;
+}
+
+#email[disabled="disabled"] {
+    color: @firmDarkThinRed!important;
+}
+
+.inputs input::placeholder  { 
+    color: @firmWhite;
+}
+
+#loginSubmit,
+#signupSubmit,
+#restoreSubmit,
+#loginLoading {
+    background-color: @firmDarkRed;
+    border: none;
+    padding: 1rem;
+    border-radius: @buttonRadius;
+    color: @firmWhite;
+    .regular();
+    font-size: 1.6em;
+    text-transform: uppercase;
+}
+
+#needInvite {
+    color: @firmWhite;
+    padding: 1rem;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginLoading {
+    text-align: center;
+    background-color: @firmGrey;
+}
+
+#restoreSubmit {
+    text-align: center;
+    background-color: @firmWhite;
+    color: @firmDarkGrey;
+}
+
+.forgot {
+    color: @firmDarkThinRed;
+    text-align: center;
+    font-size: 1.4rem;
+}
+

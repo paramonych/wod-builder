@@ -1,0 +1,167 @@
+#screen.available { 
+    #header {
+        background-color: @firmRed;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: @appPadding;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .content {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: calc(100% - @hamburgerPadding*2);
+            align-items: center;
+    
+            #midlogo {
+                top: calc(@hamburgerPadding / 8);
+            }
+        }
+    }
+
+    .coming-soon {
+        justify-content: flex-start!important;
+    
+        &:not(.no-top) {
+            margin-top: @appPadding/4;
+            div {
+                top: calc(20vh);
+            }    
+        }
+
+        &.no-top {
+            div {
+                top: calc(25vh);
+            }    
+        }
+        
+        &.qr {
+            display: block!important;
+            margin-top: 0;
+            
+            #qr {
+                max-width: 90%;
+                width: 60%;
+                height: calc(60vw);
+                margin: auto;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            .share-label {
+                text-align: center;
+                margin-top: @hamburgerPadding;
+                text-transform: uppercase;
+                font-size: @hamburgerPadding;
+                max-width: 100%;
+            }
+        }
+
+        #canvas {
+            position: relative;
+            top: calc(@hamburgerPadding - @appPadding); 
+            width: calc(100vw - @hamburgerPadding*2);
+        }
+    }
+
+    .productsList,
+    .workoutsList {
+        background-color: @firmWhite;
+        .fullwidth();
+        padding: @hamburgerPadding*1.5 @hamburgerPadding 0 @hamburgerPadding;
+
+        .athleteItem,
+        .workoutItem,
+        .productItem {
+            cursor: pointer;
+            font-size: 1.4rem;
+            .flexRowFullwidth();
+            align-items: flex-start;
+            margin-bottom: @hamburgerPadding;
+
+            .title {
+                color: @firmBlack;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+
+                .index {
+                    color: @firmRed;
+                    margin-right: @hamburgerPadding/2;
+                }
+
+                .name {
+                    border-bottom: 1px solid @firmLightGrey;
+                    width: 100%;
+                    padding-bottom: @hamburgerPadding/3;
+                }
+            }
+            
+            .actions {
+                display: flex;
+                flex-direction: column;
+
+                .edit, .delete {
+                display: flex;
+                }
+
+                .delete,.action {
+                    padding: @hamburgerPadding/3 @hamburgerPadding/2;
+                    color: @firmWhite;
+                    text-align: center;
+                    display: inline-block;
+                }
+                
+                .delete.confirmed, .action.up, .action.down {
+                    background-color: @firmLightRed;
+                }
+
+                .delete.cancel, .action.cancel {
+                    background-color: @firmDarkBlue;
+                    margin-top: @hamburgerPadding/2;
+                }
+
+                .action.down {
+                    margin-top: @hamburgerPadding/2;
+                }
+
+                .prompt {
+                    padding: 0;
+                }
+            }
+        }
+
+        .placeholder {
+            text-align: center;
+            font-size: 1.4rem;
+            margin-top: @hamburgerPadding*4;
+        }
+    }
+
+
+    .program-title {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        .twoSidesPadding();
+        .fullwidth();
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: @hamburgerPadding*2.5;
+        .bold();
+        color: @firmBlue;
+        position: relative;
+        top: @hamburgerPadding*0.75;
+        margin-bottom: @hamburgerPadding*0.25;
+    }
+}
+

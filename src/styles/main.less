@@ -1,0 +1,193 @@
+@import "./abstract/vars.less";
+@import "./abstract/colors.less";
+@import "./abstract/paths.less";
+@import "./abstract/classes.less";
+@import "./abstract/shadows.less";
+
+// COMPONENTS
+@import "./components/speechBox.less";
+@import "./components/appNavigation.less";
+@import "./components/componentNavigation.less";
+@import "./components/header.less";
+@import "./components/profileIdentity.less";
+@import "./components/slider.less";
+@import "./screens/account/account.less";
+@import "./screens/welcome/welcome.less";
+@import "./screens/workout/workout.less";
+@import "./screens/wodbook/wodbook.less";
+@import "./screens/available/available.less";
+@import "./screens/coach/coach.less";
+@import "./screens/analyse/analyse.less";
+@import "./screens/program/program.less";
+@import "./screens/support/support.less";
+@import "./screens/donate/donate.less";
+@import "./components/spinner.less";
+
+* {
+	box-sizing: border-box;
+}
+
+body, html, #app, #container, #screen {
+    .fullFrame();
+}
+
+#container.expose-menu {
+    overflow: hidden;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    background-color: @firmBlack;
+    .regular();
+}
+
+body {
+    .flexColumnCentered();
+    background-image: @welcomeBackWithLogo;
+    background-position: center;
+    background-size: cover;
+    background-color: @firmWhite;
+}
+
+.coming-soon:not(.qr) {
+    height: 100%;
+}
+
+.coming-soon {
+    font-size: @hamburgerPadding/1.1;
+    .flexColumnCentered();
+    justify-content: center!important;
+
+    div {
+        position: relative;
+        top: -@hamburgerPadding*1.8;
+        line-height: 1.8rem;
+    }
+
+    div:last-child {
+        max-width: 50%;
+        text-align: center;
+    }
+
+    .prime {
+        width: @hamburgerPadding*6;
+        height: @hamburgerPadding*6;
+        background-image: url('../images/logo/logo-small.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: @hamburgerPadding;
+    }
+}
+
+body.bright,
+html.bright {
+    background-color: @firmRed;
+}
+
+#app, #screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#screen {
+    z-index: 1;
+    background-color: #fff;
+}
+
+#placeholder {
+    position: absolute;
+    left: -2000px;
+    z-index: 0;
+    opacity: 0;
+}
+
+.body {
+    position: relative;
+    top: @appPadding;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.svg-wrap {
+    position: relative;
+}
+
+.svg-wrap .face {
+    position: absolute;
+    top:0;
+    left:0;
+    .fullFrame();
+}
+
+a {
+    color: @firmWhite;
+    text-decoration: none;
+}
+
+.screenHeader {
+    display: block;
+    .fullwidth();
+    padding-left: @hamburgerPadding;
+    padding-right: @hamburgerPadding;
+}
+
+*:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.svg-wrap, .label, button, .labels .login, .labels .signup {
+    cursor: pointer;
+}
+
+:-webkit-full-screen #app {/*WebKit, Opera 15+*/
+    overflow-y: scroll!important;
+}
+:-moz-full-screen #app {/*FireFox*/
+    overflow-y: scroll!important;
+}
+:full-screen #app {/*Opera 12.15-, Blink, w3c standard*/
+    overflow-y: scroll!important;
+}
+
+:-webkit-full-screen #screen {/*WebKit, Opera 15+*/
+    overflow-y: scroll!important;
+}
+:-moz-full-screen #screen {/*FireFox*/
+    overflow-y: scroll!important;
+}
+:full-screen #screen {/*Opera 12.15-, Blink, w3c standard*/
+    overflow-y: scroll!important;
+}
+
+:-webkit-full-screen #screen .body {/*WebKit, Opera 15+*/
+    overflow-y: scroll!important;
+}
+:-moz-full-screen #screen .body {/*FireFox*/
+    overflow-y: scroll!important;
+}
+:full-screen #screen .body {/*Opera 12.15-, Blink, w3c standard*/
+    overflow-y: scroll!important;
+}
+
+
+@import './responsive/welcome.less';
+@import './responsive/main.less';

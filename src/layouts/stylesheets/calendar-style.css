@@ -1,0 +1,14 @@
+body{margin:0}a{color:#00B7FF}
+
+html, body, #calendarContainer, .row {
+    height: 100%;
+}
+
+.days {
+    height: 50%;
+}
+
+.day {
+    text-align: center;
+    font-size: 2rem;
+}

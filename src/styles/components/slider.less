@@ -1,0 +1,188 @@
+
+input[type=range] {
+    width: 100%;
+    margin: 8px 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+
+    &:focus {
+        outline: none;
+    }
+    &::-webkit-slider-runnable-track {
+        background: #000000;
+        border: 0px solid rgba(255, 255, 255, 0);
+        border: 0;
+        border-radius: 25px;
+        width: 100%;
+        height: 3.4px;
+        cursor: pointer;
+    }
+    &::-webkit-slider-thumb {
+        margin-top: -8px;
+        width: 20px;
+        height: 20px;
+        background: #000000;
+        border: 4px solid #ffffff;
+        border-radius: 26px;
+        cursor: pointer;
+        -webkit-appearance: none;
+    }
+    &:focus::-webkit-slider-runnable-track {
+        background: #7d7d7d;
+    }
+    &::-moz-range-track {
+        background: #000000;
+        border: 0px solid rgba(255, 255, 255, 0);
+        border: 0;
+        border-radius: 25px;
+        width: 100%;
+        height: 3.4px;
+        cursor: pointer;
+    }
+    &::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        background: #000000;
+        border: 4px solid #ffffff;
+        border-radius: 26px;
+        cursor: pointer;
+    }
+    &::-ms-track {
+        background: transparent;
+        border-color: transparent;
+        border-width: 8px 0;
+        color: transparent;
+        width: 100%;
+        height: 3.4px;
+        cursor: pointer;
+    }
+    &::-ms-fill-lower {
+        background: #000000;
+        border: 0px solid rgba(255, 255, 255, 0);
+        border: 0;
+        border-radius: 50px;
+    }
+    &::-ms-fill-upper {
+        background: #000000;
+        border: 0px solid rgba(255, 255, 255, 0);
+        border: 0;
+        border-radius: 50px;
+    }
+    &::-ms-thumb {
+        width: 20px;
+        height: 20px;
+        background: #000000;
+        border: 4px solid #ffffff;
+        border-radius: 26px;
+        cursor: pointer;
+        margin-top: 0px;
+        /*Needed to keep the Edge thumb centred*/
+    }
+    &:focus::-ms-fill-lower {
+        background: #000000;
+    }
+    &:focus::-ms-fill-upper {
+        background: #7d7d7d;
+    }
+
+    &.type, &.load, &.goal {
+        &::-webkit-slider-runnable-track { background: @firmBlue; }
+        &::-webkit-slider-thumb { background: @firmBlue; }
+        &:focus::-webkit-slider-runnable-track { background: @firmBlue; }
+        &::-moz-range-track { background: @firmBlue; }
+        &::-moz-range-thumb { background: @firmBlue; }
+        &::-ms-fill-lower { background: @firmBlue; }
+        &::-ms-fill-upper { background: @firmBlue; }
+        &::-ms-thumb { background: @firmBlue; }
+        &:focus::-ms-fill-lower { background: @firmBlue; }
+        &:focus::-ms-fill-upper { background: @firmBlue; }
+    }
+
+    &.value {
+        &::-webkit-slider-runnable-track { background: @firmDarkPink; }
+        &::-webkit-slider-thumb { background: @firmDarkPink; }
+        &:focus::-webkit-slider-runnable-track { background: @firmDarkPink; }
+        &::-moz-range-track { background: @firmDarkPink; }
+        &::-moz-range-thumb { background: @firmDarkPink; }
+        &::-ms-fill-lower { background: @firmDarkPink; }
+        &::-ms-fill-upper { background: @firmDarkPink; }
+        &::-ms-thumb { background: @firmDarkPink; }
+        &:focus::-ms-fill-lower { background: @firmDarkPink; }
+        &:focus::-ms-fill-upper { background: @firmDarkPink; }
+    }
+
+    &.timer {
+        &::-webkit-slider-runnable-track { background: @firmDarkGrey; }
+        &::-webkit-slider-thumb { background: @firmDarkGrey; }
+        &:focus::-webkit-slider-runnable-track { background: @firmDarkGrey; }
+        &::-moz-range-track { background: @firmDarkGrey; }
+        &::-moz-range-thumb { background: @firmDarkGrey; }
+        &::-ms-fill-lower { background: @firmDarkGrey; }
+        &::-ms-fill-upper { background: @firmDarkGrey; }
+        &::-ms-thumb { background: @firmDarkGrey; }
+        &:focus::-ms-fill-lower { background: @firmDarkGrey; }
+        &:focus::-ms-fill-upper { background: @firmDarkGrey; }
+    }
+}
+
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+how to remove the virtical space around the range input in IE*/
+@supports (-ms-ime-align:auto) {
+/* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+    input[type=range] {
+        margin: 0;
+        /*Edge starts the margin from the thumb, not the track as other browsers do*/
+    }
+}
+
+///////////////////////////////
+
+input[type=range].one {
+    &::-webkit-slider-thumb {
+        border: 4px solid @firmLightBlue;
+    }
+    &::-moz-range-thumb {
+        border: 4px solid @firmLightBlue;
+    }
+    &::-ms-thumb {
+        border: 4px solid @firmLightBlue;
+    }
+}
+
+input[type=range].two {
+    &::-webkit-slider-thumb {
+        border: 4px solid @firmLightPink;
+    }
+    &::-moz-range-thumb {
+        border: 4px solid @firmLightPink;
+    }
+    &::-ms-thumb {
+        border: 4px solid @firmLightPink;
+    }
+}
+
+input[type=range].three {
+    &::-webkit-slider-thumb {
+        border: 4px solid @firmLighterGrey;
+    }
+    &::-moz-range-thumb {
+        border: 4px solid @firmLighterGrey;
+    }
+    &::-ms-thumb {
+        border: 4px solid @firmLighterGrey;
+    }
+}
+
+input[type=range].timer {
+    &::-webkit-slider-thumb {
+        border: 4px solid @transparent;
+    }
+    &::-moz-range-thumb {
+        border: 4px solid @transparent;
+    }
+    &::-ms-thumb {
+        border: 4px solid @transparent;
+    }
+}
+
+  

@@ -1,0 +1,127 @@
+
+#navigation {
+    background-color: @firmWhite;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+
+    .nav-container {
+        .fullFrame();
+    }
+
+    #header {
+        background-color: @firmWhite;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: @appPadding;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: none;
+
+        .content {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: calc(100% - @hamburgerPadding*2);
+            align-items: center;
+
+            #redHamburger {
+                position: absolute;
+                display: block;
+                left: 0;
+            }
+        
+            #midlogo {
+                top: calc(@hamburgerPadding / 8);
+            }
+        }    
+    }
+
+    #navbar {
+        position: absolute;
+        left: @hamburgerPadding;
+        top: 33%;
+        height: 100%;
+        width: 50%;
+
+        .label:not(:first-child) {
+            margin-top: 1.7rem;
+        }
+    }
+
+    img, .nav-label {
+        display: inline-block;
+        width: auto;
+    }
+
+    .label {
+        position: relative;
+        text-transform: uppercase;
+        font-size: 1.4em;
+        color: @firmDarkGrey;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+
+        .active {
+            color: @firmDarkGrey;
+        }
+
+        .red {
+            color: @firmRed;
+        }
+
+        .blue {
+            color: @firmBlue;
+        }
+    }
+
+    .nav-label {
+        position: absolute;
+        left: @hamburgerPadding*1.7;
+    }
+
+    #logout, #donate-screen, #login {
+        position: absolute;
+        width: 50%;
+        bottom: @hamburgerPadding*1.7;
+        left: @hamburgerPadding;
+
+        .nav-label {
+            top: 0.05rem;
+            left: @hamburgerPadding*1.6;
+        }
+    }
+}
+
+@media screen and (device-aspect-ratio: 40/71) {
+    #navbar {
+        top: 28%!important;
+        height: 100%!important;
+        width: 45%!important;
+
+        .label:not(:first-child) {
+            margin-top: 1.2rem!important;
+        }
+    }
+
+    #navigation {
+        .label {
+            font-size: 1.1rem!important;
+        }
+
+        .nav-label {
+            left: @hamburgerPadding*1.5;
+        }
+    }
+}

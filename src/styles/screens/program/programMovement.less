@@ -1,0 +1,326 @@
+#screen.program {
+    .movement {
+        color: @firmBlack;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: @firmWhite!important;
+
+        &.one {
+            .movement-details .goal-config .value {
+                color: @firmDarkerBlue;
+            }
+        }
+        &.two {
+            .movement-details .goal-config .value {
+                color: @firmRed;
+            }
+        }
+        &.three {
+            .movement-details .goal-config .value {
+                color: @firmBlack;
+            }
+        }
+
+        .add-element {
+            padding-left: 0;
+        }
+
+        .movement-header {
+            line-height: 1.3rem;
+            text-align: left;
+            .flexRowFullwidth();
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: @hamburgerPadding/2;
+            min-height: @hamburgerPadding*2.15;
+            .fullwidth();
+            padding: 0 @hamburgerPadding;
+            padding-top: @hamburgerPadding/1.5;
+
+
+            .movement-parameters {
+                max-width: 80%;
+                width: 80%;
+
+                .movement-load {
+                    .flexRowFullwidth();
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    margin-left: calc(@hamburgerPadding/2 + 6px);
+
+                    .loads {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        margin-bottom: @hamburgerPadding/3;
+
+                        .load-config {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            color: @firmRed;
+                            margin: @hamburgerPadding/2 0 @hamburgerPadding/4 0;
+                            margin-right: @hamburgerPadding;
+    
+                            .icon {
+                                margin: 0 @hamburgerPadding/4 0 0;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                            }
+
+                            .one {
+                                background-color: @firmLightBlue;
+                                color: @firmDarkBlue;
+                            }
+                            .two {
+                                background-color: @firmLightPink;
+                                color: @firmRed; 
+                            }
+                            .three {
+                                background-color: @firmLighterGrey;
+                                color: @firmBlack;
+                            }
+                        }
+                    }
+
+                    .weight-percent .value::after {
+                        content: "%";
+                    }
+
+                    .more {
+                        display: flex;
+                        position: relative;
+                        top: 2px;
+                    }
+                }
+
+                .movement-label {
+                    .flexRowFullwidth();
+                    justify-content: start;
+                    align-items: flex-start;
+                    margin-right: @hamburgerPadding/2;
+                    font-size: 1.2rem;
+                    line-height: 1.7rem;
+                    text-align: left;
+                    margin-bottom: @hamburgerPadding/2;
+
+                    .before {
+                        margin-right: @hamburgerPadding/2;
+                        margin-top: @hamburgerPadding/2.3;
+                        width: 6px;
+                        max-width: 6px;
+                        min-width: 6px;
+                        height: 6px;
+                        max-height: 6px;
+                        min-height: 6px;
+                        border-radius: 3px;
+
+                        &.one {
+                            border: 2px solid @firmDarkBlue;
+                            background-color: @firmWhite;
+                        }
+                        &.two {
+                            border: 2px solid @firmDarkPink;
+                            background-color: @firmWhite;
+                        }
+                        &.three {
+                            border: 2px solid @firmDarkGrey;
+                            background-color: @firmWhite;
+                        }
+                    }
+
+                    .video-trigger {
+                        display: flex;
+                        margin-top: @hamburgerPadding/8;
+                        margin-left: @hamburgerPadding;
+                    }
+
+                    .movement-name {
+                        .bold();
+                    }
+                }
+            }
+
+            .movement-details {
+                padding-left: @hamburgerPadding;
+                color: @firmRed;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: flex-end;
+                max-width: 30%;
+
+                .goal-config {
+                    font-size: 1.2rem;
+                    line-height: @hamburgerPadding*1.2;
+                    position: relative;
+                    top: -0.1rem;
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    text-transform: uppercase;
+                    color: @firmDarkerRed;
+                    white-space: nowrap;
+
+                    .icon {
+                        line-height: 0;
+                        margin: 0.25rem @hamburgerPadding/4 0 0;
+                    }
+                    .sub {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        .movement-sliders {
+            width: calc(100% - @hamburgerPadding*2);
+            margin-left: calc(@hamburgerPadding);
+
+            .slider {
+                .flexRowFullwidth();
+                justify-content: space-between;
+                margin-bottom: @hamburgerPadding;
+
+                input {
+                    width: @sliderWidth;
+                }
+
+                .label {
+                    font-size: 1.1rem;
+                    position: relative;
+                    top: -1px;
+                    color: @firmBlack;
+                }
+
+                &.disabled {
+                    display: none;
+                }
+            }
+        }
+
+        .goal-scroll-slider, 
+        .load-scroll-slider {
+            width: 100%;
+            height: @hamburgerPadding*2;
+            margin: @hamburgerPadding/2 0 @hamburgerPadding*1.5 0;
+            display: flex;
+            flex-direction: row;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+
+            &.Weightlifting {
+                justify-content: center;
+                margin-left: 1.666%;
+            }
+
+            .scroll-element {
+                scroll-snap-align: center;
+                height: 100%;
+                width: 30%;
+                min-width: 30%;
+                margin-right: 3.333%;
+                border: 1px solid @firmRed; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                color: @firmRed;
+                background-color: @firmWhite;
+
+                &.selected {
+                    color:@firmWhite;
+                    background-color: @firmRed;
+                }
+            }
+        }
+
+        .movement-info {
+            .fullwidth();
+            margin-bottom: @hamburgerPadding/3;
+            
+
+            .info-label {
+                width: calc(100% - @hamburgerPadding*2);
+                margin: 0 @hamburgerPadding;
+                padding: @hamburgerPadding/2.5 @hamburgerPadding/2;
+                margin: 0 @hamburgerPadding;
+                border-radius: @normalRadius;
+                background-color: @firmWhite;
+            }
+
+            .editable {
+                width: calc(100% - @hamburgerPadding*2);
+                margin: 0 @hamburgerPadding;
+            }
+
+            .remove {
+                display: flex;
+                margin-left: @hamburgerPadding;
+            }
+        }
+    }
+
+    .movement {
+        
+        &.one {
+            background-color: @firmLightBlue!important;
+            .e-action {
+                background-color: @firmLightBlue!important;
+            }
+            .e-footer {
+                background-color: @firmLighterBlue!important;
+            }
+        }
+        &.two {
+            background-color: @firmLightPink!important;
+            .e-action {
+                background-color: @firmLightPink!important;
+            }
+            .e-footer {
+                background-color: @firmLighterPink!important;
+            }
+        }
+        &.three {
+            background-color: @firmLighterGrey!important;
+            .e-action {
+                background-color: @firmLighterGrey!important;
+            }
+            .e-footer {
+                background-color: @firmLightestGrey!important;
+            }
+        }
+
+        .e-footer {
+            .fullwidth();
+            margin-bottom: 0;
+            background-color: @firmWhite;
+            padding-bottom: @hamburgerPadding*2;
+            border: none;
+
+            .e-action {
+                padding: 0 @hamburgerPadding/2;
+                border-bottom-left-radius: @normalRadius;
+                border-bottom-right-radius: @normalRadius;
+                position: relative;
+                top: -1px;
+            }
+
+            .copy-element .action-label {
+                margin-left: 0.5rem;
+            }
+        }
+
+        &:last-child {
+            .e-footer {
+                padding-bottom: 0!important;
+            }
+        }
+    }
+}
+

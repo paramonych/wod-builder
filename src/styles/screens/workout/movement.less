@@ -1,0 +1,222 @@
+#screen.workout {
+    .movement {
+        color: @firmBlack;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: @firmWhite!important;
+        margin-bottom: @hamburgerPadding*1.5;
+
+        &.one {
+            .movement-details .goal-config .value, .movement-info {
+                color: @firmDarkerBlue;
+            }
+        }
+        &.two {
+            .movement-details .goal-config .value, .movement-info {
+                color: @firmRed;
+            }
+        }
+        &.three {
+            .movement-details .goal-config .value, .movement-info {
+                color: @firmBlack;
+            }
+        }
+        
+
+        .add-element {
+            padding-left: 0;
+        }
+
+        .movement-header {
+            line-height: 1.3rem;
+            text-align: left;
+            .flexRowFullwidth();
+            justify-content: space-between;
+            align-items: flex-start;
+            
+            .fullwidth();
+
+            .movement-parameters {
+                max-width: 80%;
+                width: 80%;
+
+                .movement-load {
+                    .flexRowFullwidth();
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    margin-left: calc(@hamburgerPadding/2 + 7px);
+                    margin-top: @hamburgerPadding/2;
+
+                    .loads {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        margin-bottom: @hamburgerPadding/3;
+
+                        .load-config {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            color: @firmRed;
+                            margin-right: @hamburgerPadding/2;
+    
+                            .icon {
+                                margin: 0 @hamburgerPadding/4 0 0;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                            }
+
+                            .one {
+                                background-color: @firmWhite;
+                                color: @firmDarkBlue;
+                            }
+                            .two {
+                                background-color: @firmWhite;
+                                color: @firmRed;
+                            }
+                            .three {
+                                background-color: @firmWhite;
+                                color: @firmBlack;
+                            }
+                        }
+
+                        .weight-percent .value::after {
+                            content: "%";
+                        }
+                    }
+
+                    .more {
+                        font-size: 1.6rem;
+                        position: relative;
+                        top: 1px;
+                        margin-bottom: @hamburgerPadding/3;
+                        color: @firmRed;
+                    }
+
+                    .calc-details,.calc-result {
+                        display: inline-block;
+                    }
+                    .calc-details {
+                        margin-left: @hamburgerPadding/4;
+                        color: @firmGrey;
+                    }
+                }
+
+                .movement-label {
+                    .flexRowFullwidth();
+                    justify-content: start;
+                    align-items: flex-start;
+                    margin-right: @hamburgerPadding/2;
+                    font-size: 1.2rem;
+                    line-height: 1.7rem;
+                    text-align: left;
+                    
+
+                    .before {
+                        margin-right: @hamburgerPadding/2;
+                        margin-top: @hamburgerPadding/2.3;
+                        width: 6px;
+                        max-width: 6px;
+                        min-width: 6px;
+                        height: 6px;
+                        max-height: 6px;
+                        min-height: 6px;
+                        border-radius: 3px;
+
+                        &.one {
+                            border: 2px solid @firmDarkBlue;
+                            background-color: @firmWhite;
+                        }
+                        &.two {
+                            border: 2px solid @firmDarkPink;
+                            background-color: @firmWhite;
+                        }
+                        &.three {
+                            border: 2px solid @firmDarkGrey;
+                            background-color: @firmWhite;
+                        }
+                    }
+
+                    .video {
+                        display: flex;
+                        margin-top: @hamburgerPadding/8;
+                    }
+
+                    .movement-name {
+                        padding-right: @hamburgerPadding/2;
+                    }
+                }
+            }
+
+            .movement-details {
+                padding-left: @hamburgerPadding;
+                color: @firmRed;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: flex-end;
+                max-width: 30%;
+
+                .goal-config {
+                    font-size: 1.2rem;
+                    line-height: @hamburgerPadding*1.2;
+                    position: relative;
+                    top: -0.1rem;
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    text-transform: uppercase;
+                    color: @firmDarkerRed;
+                    white-space: nowrap;
+
+                    .icon {
+                        line-height: 0;
+                        margin: 0.25rem @hamburgerPadding/4 0 0;
+                    }
+                    .sub {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        .slider {
+            .flexRowFullwidth();
+            justify-content: space-between;
+            margin-top: @hamburgerPadding;
+
+            input {
+                width: @sliderWidth;
+            }
+
+            .label {
+                font-size: 1.1rem;
+                position: relative;
+                top: -1px;
+                color: @firmBlack;
+            }
+
+            &.disabled {
+                display: none;
+            }
+        }
+
+        .movement-info {
+            color: @firmBlack;
+            .flexRowFullwidth();
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-left: @hamburgerPadding/1.2;
+            position: relative;
+            top: -@hamburgerPadding/4;
+            margin-top: @hamburgerPadding;
+        }
+    }
+
+}
+
