@@ -2,10 +2,11 @@ import { ElementType, ParameterType } from "../models/values";
 
 export const appDomain = 'https://wod.opencoach.tech';
 const userBase = 'https://5udat88nuf.execute-api.us-east-1.amazonaws.com/dev';
-const programBase = 'https://lu29vtkzaf.execute-api.us-east-1.amazonaws.com/dev';
+const programBase = 'https://d0ifcmrw8f.execute-api.us-east-1.amazonaws.com/dev';
 const productBase = 'https://g5ws73traj.execute-api.us-east-1.amazonaws.com/dev';
 const feedbackBase = 'https://51e1hy90t6.execute-api.us-east-1.amazonaws.com/dev';
 const athleteBase = 'https://wjtvf8bwp1.execute-api.us-east-1.amazonaws.com/dev';
+
 
 export const endpoints = {
     login: `${userBase}/login`,

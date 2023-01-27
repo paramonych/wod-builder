@@ -35,7 +35,7 @@
                         },
                         {
                             "movement": {
-                                "name": "Strict Pull-up",
+                                "name": "Strict Pull-up"
                             },
                             "goal": {
                                 "type": "GoalType.Reps",
@@ -80,7 +80,7 @@
                         },
                         {
                             "movement": {
-                                "name": "Elbow rotations",
+                                "name": "Elbow rotations"
                             },
                             "goal": {
                                 "type": "GoalType.Reps",
@@ -233,7 +233,7 @@
                         },
                         {
                             "movement": {
-                                "name": "Yoke carry",
+                                "name": "Yoke carry"
                             },
                             "goal": {
                                 "type": "GoalType.DistanceNormal",
