@@ -1,4 +1,4 @@
-With any questions and/or proposals fell free to DM me [here](https://t.me/paramonych)
+With any questions and/or proposals feel free to DM me [here](https://t.me/paramonych)
 
 # OpenCoach Builder (wod-builder)
 
