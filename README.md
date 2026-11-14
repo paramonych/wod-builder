@@ -1,3 +1,5 @@
+With any questions and/or proposals fell free to DM me [here](https://t.me/paramonych)
+
 # OpenCoach Builder (wod-builder)
 
 Mobile-first web app for coaches and athletes: build structured CrossFit / weightlifting / street workout / track-and-field programs, run them with a voice-guided interval timer, and share them via a link or a QR code.
