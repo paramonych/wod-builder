@@ -151,3 +151,7 @@ src/
   styles/                 # LESS: screens, components, animations
   images/                 # SVG icons and logos
 ```
+
+## See also
+
+Listed in [Awesome Cycle.js](https://github.com/cyclejs-community/awesome-cyclejs), a curated list of Cycle.js resources.
